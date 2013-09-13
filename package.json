@@ -1,9 +1,9 @@
 {
   "name": "generator-wp-modern-frontend-theme",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
+  "version": "0.0.1",
+  "description": "A yo generator for Wordpress themes using HTML5 Boilerplate, Bootstrap, Sass, Coffeescript, Backbone and Jasmine. It also creates some grunt tasks and allow you to manage your dependencies. It was inspired by Roots theme",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator wp wordpress theme wp-theme wordpress-theme tema gerador boilerplate html5 css3 bootstrap sass less coffeescript coffee-script backbone jasmine js javascript modern frontend grunt bower mvc"
   ],
   "homepage": "https://github.com/rlpereira/generator-wp-modern-frontend-theme",
   "bugs": "https://github.com/rlpereira/generator-wp-modern-frontend-theme/issues",
