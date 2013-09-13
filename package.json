@@ -1,0 +1,41 @@
+{
+  "name": "generator-wp-modern-frontend-theme",
+  "version": "0.0.0",
+  "description": "A generator for Yeoman",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/rlpereira/generator-wp-modern-frontend-theme",
+  "bugs": "https://github.com/rlpereira/generator-wp-modern-frontend-theme/issues",
+  "author": {
+    "name": "Rafael Pereira",
+    "email": "rafaellimapereira@gmail.com",
+    "url": "https://github.com/rlpereira"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rlpereira/generator-wp-modern-frontend-theme.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
