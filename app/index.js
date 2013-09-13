@@ -23,14 +23,12 @@ WpModernFrontendThemeGenerator.prototype.askFor = function askFor() {
   console.log(this.yeoman);
 
   var prompts = [{
-    type: 'confirm',
-    name: 'someOption',
-    message: 'Would you like to enable this option?',
-    default: true
+    name: 'blogName',
+    message: 'What is your Blogs name?',
   }];
 
   this.prompt(prompts, function (props) {
-    this.someOption = props.someOption;
+    this.blogName = props.blogName;
 
     cb();
   }.bind(this));
@@ -39,6 +37,9 @@ WpModernFrontendThemeGenerator.prototype.askFor = function askFor() {
 WpModernFrontendThemeGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
+
+  this.template('css/_style.css', "style.css");
+  this.template('php/_index.php', "index.php");
 
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
