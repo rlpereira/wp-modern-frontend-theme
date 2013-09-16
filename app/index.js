@@ -35,12 +35,27 @@ WpModernFrontendThemeGenerator.prototype.askFor = function askFor() {
 };
 
 WpModernFrontendThemeGenerator.prototype.app = function app() {
+  //  creating root paths
   this.mkdir('app');
   this.mkdir('app/templates');
 
-  this.template('css/_style.css', "style.css");
-  this.template('php/_index.php', "index.php");
+  //  creating assets paths
+  this.mkdir('app/assets');
+  this.mkdir('app/assets/css');
+  this.mkdir('app/assets/js');
 
+  //  copying styles
+  this.template('css/_style.css', "style.css");
+  this.template('css/_main.css', "app/assets/css/theme.css");
+
+  // copying scripts
+  this.template('js/_theme.js', "app/assets/js/app.js");
+  
+  //  cloning php
+  this.template('php/_index.php', "index.php");
+  this.template('php/_functions.php', "functions.php");
+
+  // others stuff
   this.copy('_package.json', 'package.json');
   this.copy('_bower.json', 'bower.json');
 };
