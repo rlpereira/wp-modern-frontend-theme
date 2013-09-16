@@ -55,10 +55,6 @@ WpModernFrontendThemeGenerator.prototype.app = function app() {
 
   // copying scripts
   this.template('js/_theme.js', "app/assets/js/app.js");
-  
-  //  cloning php
-  this.template('php/_index.php', "index.php");
-  this.template('php/_functions.php', "functions.php");
 
   //  including tools
   this.template('Gruntfile.js', 'Gruntfile.js');
@@ -74,4 +70,12 @@ WpModernFrontendThemeGenerator.prototype.app = function app() {
 WpModernFrontendThemeGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
+};
+
+WpModernFrontendThemeGenerator.prototype.createPHPTemplateFiles = function createPHPTemplateFiles() {
+  //  cloning php
+  this.template('php/_index.php', "index.php");
+  this.template('php/_functions.php', "functions.php");
+  this.template('php/_header.php', "header.php");
+  this.template('php/_footer.php', "footer.php");
 };

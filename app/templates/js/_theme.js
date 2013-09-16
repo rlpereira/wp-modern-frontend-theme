@@ -7,6 +7,15 @@ window.cl = function() {
 	}
 }
 
+var bindButtons = function() {
+	$('.new-post-button').on('click', function() {
+		cl('clicked');
+		$(this).hide();
+		$("#new-post-row").slideDown('slow');
+	});
+}
+
 $(document).ready(function() {
 	cl("APP READY!");
+	bindButtons();
 });
