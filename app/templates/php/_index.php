@@ -12,7 +12,7 @@
 				?> 
 					<%= _.capitalize(blogName) %> 
 				<?php
-					echo "</h1>";
+					echo " - TESTE TECNOPUC</h1>";
 				?>
 			</div>
 		</div>

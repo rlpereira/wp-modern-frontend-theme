@@ -39,6 +39,11 @@ WpModernFrontendThemeGenerator.prototype.app = function app() {
   this.mkdir('app');
   this.mkdir('app/templates');
 
+  this.mkdir('admin');
+  this.mkdir('admin/controllers');
+  this.mkdir('admin/models');
+  this.mkdir('admin/views'); 
+
   //  creating assets paths
   this.mkdir('app/assets');
   this.mkdir('app/assets/css');
@@ -54,6 +59,12 @@ WpModernFrontendThemeGenerator.prototype.app = function app() {
   //  cloning php
   this.template('php/_index.php', "index.php");
   this.template('php/_functions.php', "functions.php");
+
+  //  including tools
+  this.template('Gruntfile.js', 'Gruntfile.js');
+  this.template('_bower.json', 'bower.json');
+  this.template('_config.json', 'config.json');
+  this.template('_package.json', 'package.json');
 
   // others stuff
   this.copy('_package.json', 'package.json');
