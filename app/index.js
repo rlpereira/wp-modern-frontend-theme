@@ -37,34 +37,9 @@ WpModernFrontendThemeGenerator.prototype.askFor = function askFor() {
 WpModernFrontendThemeGenerator.prototype.app = function app() {
   //  creating root paths
   this.mkdir('app');
-  this.mkdir('app/templates');
-
-  this.mkdir('admin');
-  this.mkdir('admin/controllers');
-  this.mkdir('admin/models');
-  this.mkdir('admin/views'); 
 
   //  creating assets paths
-  this.mkdir('app/assets');
-  this.mkdir('app/assets/css');
-  this.mkdir('app/assets/js');
-
-  //  copying styles
-  this.template('css/_style.css', "style.css");
-  this.template('css/_main.css', "app/assets/css/theme.css");
-
-  // copying scripts
-  this.template('js/_theme.js', "app/assets/js/app.js");
-
-  //  including tools
-  this.template('Gruntfile.js', 'Gruntfile.js');
-  this.template('_bower.json', 'bower.json');
-  this.template('_config.json', 'config.json');
-  this.template('_package.json', 'package.json');
-
-  // others stuff
-  this.copy('_package.json', 'package.json');
-  this.copy('_bower.json', 'bower.json');
+  this.mkdir('app/assets'); 
 };
 
 WpModernFrontendThemeGenerator.prototype.projectfiles = function projectfiles() {
@@ -72,7 +47,34 @@ WpModernFrontendThemeGenerator.prototype.projectfiles = function projectfiles() 
   this.copy('jshintrc', '.jshintrc');
 };
 
+WpModernFrontendThemeGenerator.prototype.createCssFiles = function createCssFiles() {
+  this.mkdir('app/assets/css');
+  //  copying styles
+  this.template('css/_style.css', "style.css");
+};
+
+WpModernFrontendThemeGenerator.prototype.createJsFiles = function createJsFiles() {
+    this.mkdir('app/assets/js');
+    // copying scripts
+    this.template('js/_theme.js', "app/assets/js/app.js");
+};
+
+WpModernFrontendThemeGenerator.prototype.CreateConfigFiles = function CreateConfigFiles() {
+  //  including tools
+    this.template('Gruntfile.js', 'Gruntfile.js');
+    this.template('README.md', 'README.md');
+    this.template('_bower.json', 'bower.json');
+    this.template('_config.json', 'config.json');
+    this.template('_package.json', 'package.json');
+};
+
 WpModernFrontendThemeGenerator.prototype.createPHPTemplateFiles = function createPHPTemplateFiles() {
+  //  creating php folder structure 
+  this.mkdir('admin');
+  this.mkdir('admin/controllers');
+  this.mkdir('admin/models');
+  this.mkdir('admin/views'); 
+
   //  cloning php
   this.template('php/_index.php', "index.php");
   this.template('php/_functions.php', "functions.php");

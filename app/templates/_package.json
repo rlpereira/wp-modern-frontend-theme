@@ -1,5 +1,11 @@
 {
   "name": "WP-Modern-Frontend-Theme",
+  "description": "",
   "version": "0.0.1",
+  "author": "RLPereira <rafaellimapereira@gmail.com>",
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/rlpereira/generator-wp-modern-frontend-theme.git"
+  },
   "dependencies": {}
 }
